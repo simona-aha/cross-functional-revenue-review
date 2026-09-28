@@ -93,6 +93,12 @@ This pattern is designed to support:
 
 These are **potential operational benefits demonstrated by the workflow design**, not measured client outcomes or ROI claims.
 
+## Cross-Functional Revenue Review in Practice
+
+The synthetic Orion example shows how three functional outcomes associated with the same validated account are brought into one shared Revenue Review while the final decision remains human.
+
+![Cross-Functional Revenue Review — synthetic Orion example](docs/architecture.png)
+
 ## Business Flow
 
 ```text
