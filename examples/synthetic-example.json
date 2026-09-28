@@ -1,0 +1,65 @@
+{
+  "example_type": "SYNTHETIC",
+  "description": "Minimal public example of deterministic cross-functional Revenue Review behavior.",
+  "cross_functional_example": {
+    "account": {
+      "display_name": "Orion Wave Systems",
+      "account_id": "ACC-RIOS-001"
+    },
+    "source_signals": [
+      {
+        "source_function": "MARKETING",
+        "original_status": "Ready for Handoff",
+        "signal_category": "ACTION_SIGNAL"
+      },
+      {
+        "source_function": "SALES",
+        "original_status": "ATTENTION_REQUIRED",
+        "signal_category": "ACTION_SIGNAL"
+      },
+      {
+        "source_function": "CUSTOMER_SUCCESS",
+        "original_status": "MATERIAL_DECLINE",
+        "signal_category": "ACTION_SIGNAL"
+      }
+    ],
+    "revenue_review": {
+      "review_id": "REV-ACC-RIOS-001",
+      "account_id": "ACC-RIOS-001",
+      "source_functions": [
+        "MARKETING",
+        "SALES",
+        "CUSTOMER_SUCCESS"
+      ],
+      "signal_categories": [
+        "ACTION_SIGNAL"
+      ],
+      "review_status": "PENDING_REVIEW",
+      "source_evidence_label": "SIMULATED",
+      "action_register": {
+        "action_register_required": true,
+        "register_status": "AWAITING_HUMAN",
+        "final_action": null
+      }
+    },
+    "interpretation_boundary": "The signals share a validated synthetic account identifier. Their co-occurrence does not establish causation, and the final business decision remains human."
+  },
+  "non_grouping_example": {
+    "description": "Matching display names alone are not sufficient for account grouping.",
+    "records": [
+      {
+        "source_function": "MARKETING",
+        "display_name": "Helix River Analytics",
+        "account_id": null,
+        "account_grouping_eligibility": "NOT_ELIGIBLE"
+      },
+      {
+        "source_function": "SALES",
+        "display_name": "Helix River Analytics",
+        "account_id": "ACC-RIOS-884",
+        "account_grouping_eligibility": "ELIGIBLE"
+      }
+    ],
+    "result": "NOT_GROUPED"
+  }
+}
